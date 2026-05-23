@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSA Encryption Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>RSA Encryption Demo</h1>
+
+  <section>
+    <h2>Step 1: Generate Keys</h2>
+    <!-- Input fields for the two prime numbers -->
+    <label>Prime p: <input type="number" id="primeP" value="61"></label>
+    <label>Prime q: <input type="number" id="primeQ" value="53"></label>
+    <button onclick="generate()">Generate Keys</button>
+    <p id="keyOutput"></p>
+  </section>
+
+  <section>
+    <h2>Step 2: Encrypt a Message</h2>
+    <input type="text" id="message" placeholder="Type a message...">
+    <button onclick="encrypt()">Encrypt</button>
+    <p id="encrypted"></p>
+  </section>
+
+  <section>
+    <h2>Step 3: Decrypt</h2>
+    <button onclick="decrypt()">Decrypt</button>
+    <p id="decrypted"></p>
+  </section>
+
+  <script src="rsa.js"></script>
+</body>
+</html>
