@@ -1,0 +1,99 @@
+/* Basic reset — removes default browser spacing that looks different everywhere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* makes sizing predictable */
+}
+
+/* Page overall look */
+body {
+  font-family: Arial, sans-serif; /* clean, readable font */
+  background-color: #f0f2f5;     /* light grey background */
+  color: #333;                   /* dark grey text (easier on eyes than pure black) */
+  padding: 30px 20px;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1a1a2e; /* dark navy */
+}
+
+/* Each section (Generate Keys, Encrypt, Decrypt) */
+section {
+  background: white;
+  border-radius: 10px;        /* rounded corners */
+  padding: 24px;
+  margin-bottom: 20px;        /* space between sections */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle shadow so it "lifts" off the page */
+  max-width: 600px;
+  margin-left: auto;          /* these two lines center the section */
+  margin-right: auto;
+}
+
+/* Section headings like "Step 1: Generate Keys" */
+h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Labels next to input boxes */
+label {
+  display: block;             /* puts each label on its own line */
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* The number and text input boxes */
+input[type="number"],
+input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-left: 8px;
+  width: 160px;
+  outline: none;              /* removes the ugly blue glow on click in some browsers */
+  transition: border-color 0.2s; /* smooth color change when you click on it */
+}
+
+/* Input box when you click on it */
+input:focus {
+  border-color: #4f46e5; /* purple border when active */
+}
+
+/* All buttons */
+button {
+  display: block;
+  margin-top: 14px;
+  padding: 10px 22px;
+  background-color: #4f46e5; /* purple */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;            /* shows a hand when you hover */
+  transition: background-color 0.2s;
+}
+
+/* Button when you hover over it */
+button:hover {
+  background-color: #3730a3; /* darker purple */
+}
+
+/* Output text (like the keys, encrypted text, etc.) */
+p {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #444;
+  background: #f8f8f8;       /* very light grey box behind the output */
+  border-left: 3px solid #4f46e5; /* purple left border accent */
+  padding: 10px 14px;
+  border-radius: 4px;
+  word-break: break-all;     /* stops long encrypted text from overflowing the box */
+  min-height: 20px;
+}
